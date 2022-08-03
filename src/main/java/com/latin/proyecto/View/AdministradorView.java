@@ -11,10 +11,6 @@ import javax.swing.JTabbedPane;
  */
 public class AdministradorView extends JFrame{
     private JTabbedPane layouts=new JTabbedPane();
-    private JPanel productos=new JPanel();
-    private JPanel vendedores=new JPanel();
-    private JPanel clientes=new JPanel();
-    
     
     public AdministradorView(){
         setTitle("Administrador");
@@ -26,21 +22,19 @@ public class AdministradorView extends JFrame{
     
     private void init(){
         //
-        productos.setLayout(null);
-        productos.setBackground(Color.gray);
-        clientes.setLayout(null);
-        clientes.setBackground(Color.gray);
-        vendedores.setLayout(null);
-        vendedores.setBackground(Color.gray);
-        
-        //
         SucursalView sucursalView=new SucursalView();
         sucursalView.execute();
+        ProductosView productosView=new ProductosView();
+        productosView.execute();
+        ClientesView clientesView=new ClientesView();
+        clientesView.execute();
+        VendedoresView vendedoresView=new VendedoresView();
+        vendedoresView.execute();
         
         //        
-        layouts.addTab("Productos", productos);
-        layouts.addTab("Clientes", clientes);
-        layouts.addTab("Vendedores", vendedores);
+        layouts.addTab("Productos", productosView.panelProductos);
+        layouts.addTab("Clientes", clientesView.panelClientes);
+        layouts.addTab("Vendedores", vendedoresView.panelVendedores);
         layouts.addTab("Sucursal", sucursalView.panelSucursal);
         
         //

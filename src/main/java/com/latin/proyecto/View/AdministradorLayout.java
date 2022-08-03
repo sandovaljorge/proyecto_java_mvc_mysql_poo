@@ -7,10 +7,10 @@ import javax.swing.JTabbedPane;
  *
  * @author Sandoval
  */
-public class AdministradorView extends JFrame{
-    private JTabbedPane layouts=new JTabbedPane();
+public class AdministradorLayout extends JFrame{
+    private final JTabbedPane layouts=new JTabbedPane();
     
-    public AdministradorView(){
+    public AdministradorLayout(){
         setTitle("Administrador");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -40,7 +40,7 @@ public class AdministradorView extends JFrame{
     }
     
     public static void main(String[] args) {
-        AdministradorView ad=new AdministradorView();
+        AdministradorLayout ad=new AdministradorLayout();
         ad.setVisible(true);
     }
 }

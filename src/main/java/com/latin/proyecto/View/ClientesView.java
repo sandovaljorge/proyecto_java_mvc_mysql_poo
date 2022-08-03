@@ -10,9 +10,8 @@ import javax.swing.JTable;
  *
  * @author Sandoval
  */
-public class SucursalView {
-    
-    protected JPanel panelSucursal=new JPanel();
+public class ClientesView {
+    protected JPanel panelClientes=new JPanel();
     private JScrollPane scrollPane;
     private JTable table;
     
@@ -21,8 +20,8 @@ public class SucursalView {
     }
     
     private void init(){
-        panelSucursal.setLayout(null);
-        panelSucursal.setBackground(Color.gray);
+        panelClientes.setLayout(null);
+        panelClientes.setBackground(Color.gray);
         initButtons();
         initTable();
     }
@@ -30,31 +29,31 @@ public class SucursalView {
     private void initButtons(){
         JButton btnCreate=new JButton("Crear");
         btnCreate.setBounds(500, 25, 150, 50);
-        panelSucursal.add(btnCreate);
+        panelClientes.add(btnCreate);
         
         JButton btnLoad=new JButton("Cargar");
         btnLoad.setBounds(700, 25, 150, 50);
-        panelSucursal.add(btnLoad);
+        panelClientes.add(btnLoad);
         
         JButton btnUpdate=new JButton("Actualizar");
         btnUpdate.setBounds(500, 100, 150, 50);
-        panelSucursal.add(btnUpdate);
+        panelClientes.add(btnUpdate);
         
         JButton btnDelete=new JButton("Eliminar");
         btnDelete.setBounds(700, 100, 150, 50);
-        panelSucursal.add(btnDelete);
+        panelClientes.add(btnDelete);
         
         JButton btnExport=new JButton("Exportar a PDF");
         btnExport.setBounds(500, 180, 350, 50);
-        panelSucursal.add(btnExport);
+        panelClientes.add(btnExport);
     }
     
     private void initTable(){
-        String columns[] = {"CODIGO","NOMBRE","DIRECCION","CORREO","TELEFONO"};
-        Object files [][]={{"2022","Jorge","Zona 1","jorge@correo.com","12345678"}};
+        String columns[] = {"CODIGO","NOMBRE","NIT","CORREO","GENERO"};
+        Object files [][]={{"2022","Jorge","1234567-8","jorge@correo.com","M"}};
         table=new JTable(files,columns);
         scrollPane=new JScrollPane(table);
         scrollPane.setBounds(10, 20, 450, 450);
-        panelSucursal.add(scrollPane);
+        panelClientes.add(scrollPane);
     }
 }

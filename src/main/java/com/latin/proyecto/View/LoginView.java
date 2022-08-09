@@ -2,7 +2,6 @@ package com.latin.proyecto.View;
 
 import com.latin.proyecto.Controller.UsuarioController;
 import com.latin.proyecto.Model.Usuario;
-import com.latin.proyecto.View.Register.RegisterLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +17,6 @@ public class LoginView extends JFrame{
     private JTextField txtUsuario;
     private JPasswordField txtPassword;
     private AdministradorLayout adLayout;
-    private RegisterLayout reLayout;
     
     public LoginView(){
         setSize(300,270);

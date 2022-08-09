@@ -35,7 +35,7 @@ public class AdministradorLayout extends JFrame{
         ProductosView productosView=new ProductosView();
         productosView.execute(this.role);       
         PersonaView personaView=new PersonaView();
-        personaView.execute();
+        personaView.execute(this.role);
         ClientesView clientesView=new ClientesView();
         clientesView.execute(this.role);
         VendedoresView vendedoresView=new VendedoresView();

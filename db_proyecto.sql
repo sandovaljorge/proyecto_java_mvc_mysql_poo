@@ -54,6 +54,10 @@ CREATE TABLE CLIENTE(
 );
 ALTER TABLE CLIENTE AUTO_INCREMENT=1;
 SELECT * FROM CLIENTE;
+SELECT C.CODIGO,P.NOMBRE,NIT,P.CORREO,P.GENERO FROM CLIENTE AS C 
+INNER JOIN PERSONA AS P ON C.CODIGO_PERSONA=P.CODIGO;
+
+select * from usuario;
 
 
 INSERT INTO PRODUCTO(NOMBRE,DESCRIPCION, CANTIDAD,PRECIO) 
@@ -67,7 +71,7 @@ values('jorge armando','sandoval latin','villa nueva guatemala','jorge@correo.co
 select * from persona;
 
 insert into usuario(codigo_persona,usuario,password,fecha_creacion,role,estado) 
-values(1,'jsandoval','123456','2022-08-01',1,true);
+values(10,'sFuentes','123456','2022-08-08',2,true);
 select * from producto;
 
 select * from sucursal;

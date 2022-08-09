@@ -57,7 +57,7 @@ public class ClientesView {
         panelClientes.add(btnCreate);
         ActionListener create=(ActionEvent e) -> {
             this.cliente=null;
-//            create(model,row);
+            //create(model,row);
         };
         btnCreate.addActionListener(create);
         
@@ -80,12 +80,10 @@ public class ClientesView {
         btnExport.setEnabled(false);
         btnExport.setBounds(500, 180, 350, 50);
         panelClientes.add(btnExport);
-        ActionListener export=(ActionEvent e) -> {
+        ActionListener export=(var e) -> {
             try {
                 pdf();
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(ClientesView.class.getName()).log(Level.ALL.SEVERE, null, ex);
-            } catch (DocumentException ex) {
+            } catch (FileNotFoundException | DocumentException ex) {
                 Logger.getLogger(ClientesView.class.getName()).log(Level.SEVERE, null, ex);
             }
         };

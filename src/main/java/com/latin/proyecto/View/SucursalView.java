@@ -5,7 +5,6 @@ import com.latin.proyecto.Model.Sucursal;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -33,7 +32,7 @@ public class SucursalView {
     private JTextField txtDireccion;
     private JTextField txtTelefono;
     private JTextField txtCorreo;
-    private JButton btnUpdate, btnDelete;
+    private JButton btnUpdate, btnDelete,btnExport;
     private DefaultTableModel dfm;
     private int row,codigo;    
     
@@ -85,9 +84,10 @@ public class SucursalView {
         };
         btnDelete.addActionListener(delete);
         
-        JButton btnExport=new JButton("Exportar a PDF");
+        btnExport=new JButton("Exportar a PDF");
         btnExport.setBounds(500, 180, 350, 50);
-        panelSucursal.add(btnExport);
+        panelSucursal.add(btnExport);        
+        
     }
     
     private void initTable(){
@@ -151,7 +151,6 @@ public class SucursalView {
             sucursal=new Sucursal();
         }
 
-        
         administradorLayout=new AdministradorLayout();
         sucursalDialog=new JDialog(administradorLayout,true);
         sucursalDialog.setTitle("Sucursal");
@@ -213,7 +212,6 @@ public class SucursalView {
                 btnUpdate.setEnabled(true);
                 btnDelete.setEnabled(true);
             }
-            //System.out.println("Row "+row);
     }
     
     private void delete(DefaultTableModel dfm,int row){

@@ -13,8 +13,8 @@ import javax.swing.JTextField;
  */
 public class RegistroUsuarioView {
     protected JPanel panel=new JPanel();
-    private final int X=40;
-    private final int Y=70;
+    private final short X=40;
+    private final short Y=70;
     
     public void execute(){
         init();

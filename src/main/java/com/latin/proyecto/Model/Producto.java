@@ -5,17 +5,17 @@ package com.latin.proyecto.Model;
  * @author Sandoval
  */
 public class Producto {
-    private short codigo;
+    private int codigo;
     private String nombre;
     private String descripcion;
-    private short cantidad;
+    private int cantidad;
     private float precio;
 
-    public short getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(short codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -35,11 +35,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public short getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(short cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 

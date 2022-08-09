@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public interface IUsuario {
     public ArrayList<Usuario> list();
-    public short login(Usuario usuario);
+    public int login(Usuario usuario);
     public void create(Usuario usuario);
     public void update(Usuario usuario);
     public void delete(int id);

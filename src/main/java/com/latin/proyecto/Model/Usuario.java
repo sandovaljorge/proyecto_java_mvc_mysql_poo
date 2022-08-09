@@ -12,9 +12,10 @@ public class Usuario {
     private String usuario;
     private String password;
     private Date fechaCreacion;
-    private short role;
+    private int role;
     private boolean estado;
     private String date;
+    private int codigoPersona;
 
     public int getCodigo() {
         return codigo;
@@ -49,6 +50,14 @@ public class Usuario {
         this.fechaCreacion = fechaCreacion;
     }
 
+    public int getCodigoPersona() {
+        return codigoPersona;
+    }
+
+    public void setCodigoPersona(int codigoPersona) {
+        this.codigoPersona = codigoPersona;
+    }
+
     public boolean getEstado() {
         return estado;
     }
@@ -57,11 +66,11 @@ public class Usuario {
         this.estado = estado;
     }
 
-    public short getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(short role) {
+    public void setRole(int role) {
         this.role = role;
     }
 

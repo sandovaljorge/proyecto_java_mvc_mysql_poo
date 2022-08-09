@@ -25,10 +25,10 @@ public class UsuarioController implements IUsuario{
     }
 
     @Override
-    public short login(Usuario usuario) {
+    public int login(Usuario usuario) {
         query="SELECT ROLE FROM USUARIO WHERE USUARIO=? AND PASSWORD=?;";
         //query="SELECT CODIGO,USUARIO,FECHA_CREACION,ESTADO FROM USUARIO WHERE USUARIO=? AND PASSWORD=?;";
-        short role=-1;
+        int role=-1;
         try{            
             conexion.openConexion();
             ps = conexion.getConexion().prepareStatement(query);

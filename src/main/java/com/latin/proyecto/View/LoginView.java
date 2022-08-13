@@ -79,11 +79,13 @@ public class LoginView extends JFrame{
                 switch (role) {
                     case 1 -> {
                         adLayout=new AdministradorLayout(role);
+                        adLayout.setTitle("Administrador");
                         adLayout.setVisible(true);
                         this.setVisible(false);
                     }
                     case 2 -> {
                         adLayout=new AdministradorLayout(role);
+                        adLayout.setTitle("Vendedor");
                         adLayout.setVisible(true);
                         this.setVisible(false);
                     }

@@ -1,5 +1,7 @@
 package com.latin.proyecto.View;
 
+//import com.latin.proyecto.Controller.ClienteController;
+//import com.latin.proyecto.Model.Cliente;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
@@ -16,12 +18,12 @@ public class AdministradorLayout extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setBounds(50, 200, 900, 550);
+        setResizable(false);
         init();
     }
     
     public AdministradorLayout(int role){
         this.role=role;
-        setTitle("Administrador");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setBounds(50, 200, 900, 550);
@@ -40,6 +42,10 @@ public class AdministradorLayout extends JFrame{
         clientesView.execute(this.role);
         VendedoresView vendedoresView=new VendedoresView();
         vendedoresView.execute();
+        NuevaVentaView nVentaView=new NuevaVentaView();
+        nVentaView.execute();
+        VentaView venta=new VentaView();
+        venta.execute();
         
         //        
         if(this.role==1){
@@ -51,16 +57,18 @@ public class AdministradorLayout extends JFrame{
         }else{
             layouts.addTab("Personas", personaView.panel);
             layouts.addTab("Clientes", clientesView.panelClientes);
+            layouts.addTab("Nueva Venta", nVentaView.globalPanel);
+            layouts.addTab("Venta", venta.panelVenta);
         }
         
         //
         add(layouts);
     }
     
-    public static void main(String[] args) {
-        AdministradorLayout ad=new AdministradorLayout();
-        ad.setVisible(true);
-    }
+//    public static void main(String[] args) {
+//        AdministradorLayout ad=new AdministradorLayout();
+//        ad.setVisible(true);
+//    }
 
     public int getRole() {
         return role;
@@ -69,4 +77,6 @@ public class AdministradorLayout extends JFrame{
     public void setRole(int role) {
         this.role = role;
     }
+    
+    
 }

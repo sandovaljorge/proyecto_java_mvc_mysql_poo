@@ -513,10 +513,4 @@ public class PersonaView {
         rbtnEstado.setBackground(Color.LIGHT_GRAY);
         panel.add(rbtnEstado);
     }
-//                usuario.setUsuario(txtUser.getText());
-//                usuario.setPassword(txtPassword.getText());
-//                usuario.setCodigoPersona(persona.getCodigo());
-//                usuario.setFechaCreacion(java.sql.Date.valueOf(LocalDate.now()));
-//                usuario.setRole(1);
-//                usuario.setEstado(true);
 }

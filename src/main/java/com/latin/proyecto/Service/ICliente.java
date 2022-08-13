@@ -10,6 +10,8 @@ import java.util.ArrayList;
  */
 public interface ICliente {
     public ArrayList<Cliente> list();
+    public ArrayList<Cliente> list(String parameter);
+    public Cliente clientByName(String parameter);
     public Cliente clienteById(int codigo);
     public void create(Cliente cliente);
     public void update(Cliente cliente);

@@ -10,4 +10,5 @@ import java.util.ArrayList;
 public interface IVenta {
     public void create(Venta venta);
     public ArrayList<Venta> list();
+    public ArrayList<Venta> getByParam(Venta parameter);
 }

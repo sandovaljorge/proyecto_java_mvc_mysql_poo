@@ -1,7 +1,9 @@
 package com.latin.proyecto.View;
 
-//import com.latin.proyecto.Controller.ClienteController;
-//import com.latin.proyecto.Model.Cliente;
+import com.latin.proyecto.Controller.VentaController;
+import com.latin.proyecto.Model.Venta;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
@@ -58,18 +60,32 @@ public class AdministradorLayout extends JFrame{
             layouts.addTab("Personas", personaView.panel);
             layouts.addTab("Clientes", clientesView.panelClientes);
             layouts.addTab("Nueva Venta", nVentaView.globalPanel);
-            layouts.addTab("Venta", venta.panelVenta);
+            layouts.addTab("Venta", venta.globalPanel);
         }
         
         //
         add(layouts);
     }
+    public static void main(String[] args) {
+        VentaController v=new VentaController();
+        Venta ve=new Venta();
+        ve.setNombre("");
+        ve.setNit("");
+        ve.setDate("");
+        try{
+            if(ve.getDate().equals("")){
+                System.out.println("null date");
+            }else{
+                System.out.println("Date not null");
+            }
+        }catch(NullPointerException e){
+            System.out.println("Error");            
+        }
+        for(Venta ven: v.getByParam(ve)){
+            System.out.println("Codigo: "+ven.getCodigo()+" Nombre: "+ven.getNombre());
+        }
+    }
     
-//    public static void main(String[] args) {
-//        AdministradorLayout ad=new AdministradorLayout();
-//        ad.setVisible(true);
-//    }
-
     public int getRole() {
         return role;
     }

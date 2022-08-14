@@ -21,9 +21,7 @@ public class ClienteController implements ICliente{
     @Override
     public ArrayList<Cliente> list() {
         ArrayList<Cliente> list=new ArrayList<>();
-        query = "SELECT C.CODIGO,P.NOMBRE,NIT,P.CORREO,P.GENERO FROM CLIENTE AS C "
-                + "INNER JOIN PERSONA AS P ON C.CODIGO_PERSONA=P.CODIGO;";
-        //query = "SELECT * FROM VIEW_CLIENTE;";
+        query = "SELECT * FROM VIEW_CLIENTE;";
         try{
             conexion.openConexion();
             ps = conexion.getConexion().prepareStatement(query);
@@ -31,7 +29,6 @@ public class ClienteController implements ICliente{
             while(rs.next()){
                 Cliente cliente=new Cliente();
                 cliente.setCodigo(rs.getShort(1));
-                //cliente.setCodigoPersona(rs.getInt(2));
                 cliente.setNombre(rs.getString(2));
                 cliente.setNit(rs.getString(3));
                 cliente.setCorreo(rs.getString(4));
@@ -55,7 +52,7 @@ public class ClienteController implements ICliente{
             ps.setInt(1, cliente.getCodigoPersona());
             ps.setString(2, cliente.getNit());
             ps.executeUpdate();
-            System.out.println("Inserted...");
+            //System.out.println("Inserted...");
         }catch(SQLException e){
             System.out.println("Error "+e);
         }finally{
@@ -72,7 +69,7 @@ public class ClienteController implements ICliente{
             ps.setString(1, cliente.getNit());
             ps.setInt(7, cliente.getCodigo());
             ps.executeUpdate();
-            System.out.println("Updated...");
+            //System.out.println("Updated...");
         }catch(SQLException e){
             System.out.println("Error "+e);
         }finally{

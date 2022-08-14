@@ -201,7 +201,7 @@ public class NuevaVentaView {
     }
     
     private void filter(){
-        System.out.println("Pressed...");
+        //System.out.println("Pressed...");
         cController=new ClienteController();
         Cliente client=new Cliente();
         client=cController.clientByName(txtNombre.getText());
@@ -213,7 +213,6 @@ public class NuevaVentaView {
     }
     
     private void initTextFields(JPanel panel){
-        //cController=new ClienteController();
         txtNombre=new JTextField();
         txtNombre.setBounds(210, 20, 200, 30);
         panel.add(txtNombre);

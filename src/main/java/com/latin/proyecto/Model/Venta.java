@@ -7,20 +7,11 @@ import java.util.Date;
  *
  * @author Sandoval
  */
-public class Venta {
-    private int codigo;
+public class Venta extends Cliente{
     private int codigoCliente;
     private Date fecha;
     private String date;
     private double total;
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
 
     public int getCodigoCliente() {
         return codigoCliente;
@@ -32,6 +23,7 @@ public class Venta {
 
     public Date getFecha() {
         this.date = new SimpleDateFormat("yyyy-MM-dd").format(fecha);
+        //setDate(new SimpleDateFormat("yyyy-MM-dd").format(fecha));
         return fecha=java.sql.Date.valueOf(this.date);
     }
 
